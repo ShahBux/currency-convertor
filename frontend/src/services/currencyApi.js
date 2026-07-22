@@ -1,4 +1,6 @@
-const BASE_URL = import.meta.env.VITE_BASE_URL || "http://localhost:3000/api";
+const BASE_URL =
+  import.meta.env.VITE_BASE_URL ||
+  "https://currency-convertor-backend-mu.vercel.app/api";
 async function fetchFromApi(endpoint) {
   const response = await fetch(`${BASE_URL}${endpoint}`);
   const responseData = await response.json().catch(() => ({}));
